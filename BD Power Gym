@@ -3,13 +3,13 @@ CREATE DATABASE powergym;
 USE powergym
 
 CREATE TABLE usuario(
-Folio INT(5) PRIMARY KEY,
+Folio INT(5) not null PRIMARY KEY auto_increment,
 Nombre VARCHAR(30) NOT NULL,
 Contraseña VARCHAR(30));
 
 
 CREATE TABLE cliente(
-Folio_cliente INT(5) NOT NULL PRIMARY KEY,
+Folio_cliente INT(5) NOT NULL PRIMARY KEY auto_increment,
 Nombre VARCHAR(30) NOT NULL,
 Apellido_Paterno VARCHAR(30) NOT NULL,
 Apellido_Materno VARCHAR(30),
@@ -17,7 +17,7 @@ Sexo CHAR(1) CHECK(Sexo IN('H','M')),
 Direccion VARCHAR(50),
 Telefono VARCHAR(10),
 E_Mail VARCHAR(40),
-Fecha_Nacimiento VARCHAR(14),
+Fecha_Nacimiento DATE,
 Peso DECIMAL,
 Estatura DECIMAL,
 Discapacidad CHAR(2) CHECK (Discapacidad IN('SI','NO')),
@@ -28,7 +28,7 @@ Imagen BLOB,
 Empleado INT(5));
 
 CREATE TABLE empleado(
-Folio_empleado INT(5) NOT NULL PRIMARY KEY,
+Folio_empleado INT(5) NOT NULL PRIMARY KEY AUTO_INCREMENT,
 Nombre VARCHAR(30) NOT NULL,
 Apellido_Paterno VARCHAR(30),
 Apellido_Materno VARCHAR(30),
@@ -36,18 +36,18 @@ Sexo CHAR(1) CHECK(Sexo IN('H','M')),
 Direccion VARCHAR(50),
 Telefono VARCHAR(11),
 E_Mail VARCHAR(40),
-Fecha_Nacimiento VARCHAR(30),
+Fecha_Nacimiento DATE,
 Imagen BLOB);
 
 CREATE TABLE pago(
-Folio_pago INT(10) NOT NULL PRIMARY KEY,
+Folio_pago INT(10) NOT NULL PRIMARY KEY AUTO_INCREMENT,
 Cliente_Folio INT(5),
 Empleado_Folio INT(5),
 Fecha VARCHAR(14),
 Monto DECIMAL);
 
 CREATE TABLE producto(
-Folio_producto INT(5) NOT NULL PRIMARY KEY,
+Folio_producto INT(5) NOT NULL PRIMARY KEY AUTO_INCREMENT,
 Nombre VARCHAR(30),
 Descripcion VARCHAR(70),
 Cantidad INT(5),
@@ -56,12 +56,12 @@ Fecha_Caducidad VARCHAR(14),
 Folio_Empleado INT(5));
 
 CREATE TABLE promocion(
-Folio_promocion INT(3) NOT NULL PRIMARY KEY,
+Folio_promocion INT(3) NOT NULL PRIMARY KEY AUTO_INCREMENT,
 Nombre VARCHAR(30),
 Descuento DECIMAL);
 
 CREATE TABLE venta(
-Folio_venta INT(10) NOT NULL PRIMARY KEY,
+Folio_venta INT(10) NOT NULL PRIMARY KEY AUTO_INCREMENT,
 Folio_Empleado INT(5),
 Folio_producto1 INT(5),
 Folio_producto2 INT(5),
