@@ -8,8 +8,10 @@ PROCEDIMIENTO:
 5.	El cliente efectúa el pago correspondiente al primer mes, adquiriendo o no una promoción.
 6.	El encargado registra el pago efectuado por el cliente.
 7.	El encargado entrega un comprobante de pago al cliente.
+8.  El encargado entrega la rutina de ejercicios al cliente.
 DATOS DE ENTRADA:
 •	Cliente: se le asignará una clave única, nombre, apellido paterno, apellido materno, sexo, dirección, e-mail, teléfono, fecha de nacimiento, peso, estatura, discapacidad (en caso de tener alguna) y fecha de registro.
 DATOS DE SALIDA.
 •	Reportes de cliente registrado.
 •	Comprobante de pago.
+. Rutina de ejercicios 
