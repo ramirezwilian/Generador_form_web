@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+		  <meta charset="UTF-8" />
+    </head>
+    <body>
+      <div align="center" >
+  		  <form method="post" action="#">
+  			<div>
+  				<input type="button" value=""  onClick="location.href='semana.html'" />
+  				<input type="button" value=""  onClick="location.href='#'" />
+  				<input type="button" value=""  onClick="location.href='ejercicios.html'" />
+  				<input type="button" value=""  onClick="location.href='#'" />
+  				<input type="button" value=""  onClick="location.href='#'" />
+  			</div>
+  		  </form>
+		  </div>
+		  <div align="center">
+			  <input type="button"  onClick="'#'"/>
+			  <input type="button"  onClick="location.href='index.html'"/>
+		  </div>
+		</div>
+    </body>
+</html>
