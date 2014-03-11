@@ -1,0 +1,109 @@
+Para ver las tablas de una base de datos:
+	show tables;
+Para ver los registros de una tabla usamos "select":
+	select nombre,clave from usuarios;
+Para ver la estructura de una tabla
+describe usuarios;
+Tipos básicos de datos en una tabla:
+
+CHAR
+Puede contener un único carácter.
+
+TINYINT
+Contiene un valor entero muy pequeño. El rango con signo es entre -128 y 127. El rango sin singo, de 0 a 255.
+
+VARCHAR()
+
+BIT, BOOL, BOOLEAN
+Todos son sinónimos de TINYINT(1).
+
+SMALLINT
+Contiene un entero corto. El rango con signo es de -32768 a 32767. El rango sin singo, de 0 a 65535.
+
+MEDIUMINT
+Contiene un entero de tamaño medio, el rango con signo está entre -8388608 y 8388607. El rango sin signo, 
+entre 0 y 16777215.
+
+BIGINT
+Contiene un entero grande. El rango con signo es de -9223372036854775808 a 9223372036854775807. El rango sin signo, 
+de 0 a 18446744073709551615.
+
+FLOAT
+Contiene un número en coma flotante. precision puede ser menor o igual que 24 para números de precisión sencilla y 
+entre 25 y 53 para números en coma flotante de doble precisión. Estos tipos son idénticos que los tipos FLOAT yDOUBLE. 
+
+DOUBLE
+Contiene un número en coma flotante de tamaño normal (precisión doble). Los valores permitidos están entre 
+-1.7976931348623157E+308 y -2.2250738585072014E-308, 0, y entre 2.2250738585072014E-308 y 1.7976931348623157E+308. 
+Si se especifica el modificador UNSIGNED, no se permiten los valores negativos.
+
+http://mysql.conclase.net/curso/?cap=005
+
+Agregar un registro a la tabla:
+insert into tabla (nombre, clave) values ('FernandoCarlos','Gonzales');
+
+Multiplicar el precio por la cantidad por cada valor, podemos hacer que MySQL realice el cálculo:
+ select titulo, precio,cantidad,precio*cantidad from libros;
+
+Operadores:
+select * from libros
+  where precio>=20 and precio<=40;
+
+Si empleamos "replace":
+ replace into libros values(23,'Java en 10 minutos','Mario Molina','Emece',25.5);
+
+alter table" se usa para:
+- agregar nuevos campos,
+- eliminar campos existentes,
+- modificar el tipo de dato de un campo,
+- agregar o quitar modificadores como "null", "unsigned", "auto_increment",
+- cambiar el nombre de un campo,
+- agregar o eliminar la clave primaria,
+- agregar y eliminar índices,
+- renombrar una tabla.
+"alter table" hace una copia temporal de la tabla original, realiza los cambios en la copia, luego borra la 
+tabla original y renombra la copia.
+
+select autor,
+  if (count(*)>1,'Más de 1','1')
+  from libros
+  group by autor;
+
+select * from libros
+  join editoriales
+  on libros.codigoeditorial=editoriales.codigo;
+
+Crear table a partir del select de otra existente:
+create table editoriales
+  select distinct editorial as nombre
+  from libros;
+La tabla "editoriales" se ha creado.
+
+Insertar datos en otra tabla a través de la consulta:
+insert into libros (titulo,autor,codigoeditorial,precio)
+  select 'Harry Potter y la camara secreta','J.K.Rowling',codigo,45.90
+  from editoriales
+  where nombre='Emece';
+
+Actualizacion en cascada:
+Si modificamos algún dato de un registro que se encuentra en registros de otras tablas (generalmente campos 
+que son clave ajena) debemos modificar también los registros de otras tablas en los cuales se encuentre ese 
+dato (generalmente clave primaria). Podemos realizar la actualización en cascada (es decir, en todos los 
+registros de todas las tablas que contengan el dato modificado) en una sola sentencia, combinando "update" 
+con "join" y seteando los campos involucrados de todas las tablas.
+
+Las siguientes funciones encriptan y desencriptan valores:
+
+Si necesitamos almacenar un valor que no queremos que se conozca podemos encriptar dicho valor, es decir, 
+transformarlo a un código que no pueda leerse.
+
+Con "encode" se encripta una cadena. La función recibe 2 argumentos: el primero, la cadena a encriptar; el 
+segundo, una cadena usada como contraseña para luego desencriptar:
+ select encode('feliz','dia');
+ 
+El resultado es una cadena binaria de la misma longitud que el primer argumento.
+Con "decode" desencriptamos una cadena encriptada con "encode". Esta función recibe 2 argumentos: el primero, 
+la cadena a desencriptar; el segundo, la contraseña:
+ 
+ select decode('§ ¡Ý7','dia');
+
