@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+		<meta charset="UTF-8" />
+        <link rel="shortcut icon" href="../favicon.ico"> 
+        <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    </head>
+    <body>
+        <div class="sumit" align="center" >
+		  <form class="ai-form" method="post" action="#">
+			<div>
+				<input type="button" value="" class="box-button-top" onClick="location.href='semana.html'" />
+				<input type="button" value="" class="box-button2" onClick="location.href='#'" />
+				<input type="button" value="" class="box-button3" onClick="location.href='ejercicios.html'" />
+				<input type="button" value="" class="box-button4" onClick="location.href='#'" />
+				<input type="button" value="" class="box-button-down"onClick="location.href='#'" />
+			</div>
+		  </form>
+		  </div>
+		  <div class="r-link" align="center">
+			<input type="button" class="btn-perfil" onClick="'#'"/>
+			<input type="button" class="btn-cerrar" onClick="location.href='index.html'"/>
+		  </div>
+		</div>
+    </body>
+</html>
