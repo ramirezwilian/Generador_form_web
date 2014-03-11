@@ -90,3 +90,6 @@ Total_6 INT(3),
 Total DECIMAL,
 Fecha VARCHAR(20));
 
+
+/* Este es un comentario  */
+
