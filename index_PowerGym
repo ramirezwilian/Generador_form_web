@@ -16,7 +16,8 @@
 			</div>
 		  </form>
 		  <div class="re-link">
-				<a href="#" class="re-under">Olvidaste tu contrasena?</a>
+				<a href="#" class="re-under">¿Olvidaste tu contrasena?</a>
+				<a href="#" class="re-under">crear nuevo usuario</a>
 		  </div>
 		</div>
     </body>
