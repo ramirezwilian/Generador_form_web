@@ -15,6 +15,11 @@
 				<h1>Ingrese su apellido paterno:</h1>
 				<input type="text" name="paterno">
 				
+				<h1>Ingrese su apellido pmterno:</h1>
+				<input type="text" name="materno">
+				
+				<h1>Ingrese su E-mail</h1>
+				<input type="text" name="email">
 				
 				<input type="submit" value="Registrar">
 			</form></center>
