@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+	<HEAD>
+		<title> Registro de Clientes</title>
+	</HEAD>
+	<body>	
+		<div style="margin:50px; background-color:Salmon"> 
+			<center><form action="datosInsertados.php" method="post">
+				
+				<h1>Ingrese su Folio:</h1>
+				<input type="text" name="folio">
+				
+				<h1>Ingrese su nombre:</h1>
+				<input type="text" name="txtname">
+				
+				<h1>Ingrese su apellido paterno:</h1>
+				<input type="text" name="paterno">
+				
+				
+				<input type="submit" value="Registrar">
+			</form></center>
+		</div>
+		
+		<form method="post" action="consulta.php">
+			<input type="submit" value="consultar">
+		</form>
+		
+	</body>
+</HTML>
