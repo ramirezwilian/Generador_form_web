@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+	<head>
+		<title> Pagina dos, Registro de Jugadores</title>
+	</head>
+	<body>
+		
+	<!-- ........... Conexion a la base de datos ...........-->
+	<?php
+		$conexion=mysql_connect("localhost","root","lscadictos")
+		 or die("Problemas en la conexion");
+		 
+		 mysql_select_db("juego", $conexion) 
+		 or die("Problemas en la seleccion de base de datos");
+		 
+		 mysql_query("insert into jugador(Folio,Nombre,Apellido_paterno,Apellido_materno,E_mail) values
+		 ('$_REQUEST[folio]', '$_REQUEST[txtname]','$_REQUEST[paterno]', '$_REQUEST[materno]', '$_REQUEST[email]')", $conexion)
+		 or die("Problemas en el insert".mysql_error() );
+		 
+		mysql_close($conexion);
+		
+		echo "El cliente fue dado de alta exitosamente";
+	?>
+	</body>
+	<a href="index.html"> Regresar </a>
+</HTML>
