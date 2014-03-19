@@ -1,0 +1,4 @@
+create database base1;
+use base1;
+create table jugador ( idjugador int auto_increment primary key, nombre varchar(50), email varchar(50), codigoequipo int);
+
