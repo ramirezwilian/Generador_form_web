@@ -1,0 +1,17 @@
+<!DOCTYPE HTML>
+<head>
+		<title> Seleccione la base de datos</title>
+	</head>
+	<body>
+	
+	<div style="margin:50px; background-color:Green"> 
+	<center><form action="select_bd.php" method="post">
+				
+				<h1>Contraseña:</h1>
+		        <input type="text" name="contra">
+				
+		<input type="submit" value="Conectar">
+			</form></center>
+	</div>
+	</body>
+</HTML>
