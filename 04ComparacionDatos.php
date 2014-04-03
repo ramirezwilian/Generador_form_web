@@ -50,18 +50,5 @@
 			echo "<label>".$type." </label>";
 			echo "<input type=".$inputType." name=txt".$field.">  <br>";
 	}
-//		if(echo   substr_compare( $cadena, $tiposDeDatos[$i], 0, 1))
-	
-//	$miarray = array();
-//	for($i=0; $i<10; $i++)
-//	{
-//		$miarray[]=$i;
-//		array_push();
-//		echo $miarray[$i];
-//		echo "<br>";
-//	}
-	
-	//CompararCadenas("int(11)");
-	//require_once("pagina2.php");
 ?>
 
