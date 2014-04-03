@@ -63,7 +63,8 @@
 	 			} while ( $lastChar != "(" );
 				echo "<label> ".$clonCadena.": </label>";
 				$length = substr($key, $contador + 1, -1);
-	 			echo $length;
+	 			$tipodeDato[$i] = "$clonCadena.$length";
+	 			echo $tipodeDato[$i];
 	 			echo "<br>";
 	 		}
 		echo "</form>";
