@@ -1,0 +1,54 @@
+<!doctype html>
+	<head>
+		<title> Registro de Jugadores</title>
+		<link rel="StyleSheet" type="text/css" href="css/bootstrap.css">
+	</head>
+	<body>	
+		<center><div class="container"> 	
+			<div class="col-md-8">
+				<div class="row">
+					<div class="col-md-12" style="background-color:green">
+						<h1> Consulta - Read </h1>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12" style="background-color:red">
+						<form method="post" action="consulta.php">
+							<input type="submit" value="consultar">
+						</form>		
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4" style="background-color:yellow">
+					<h1> Crear nuevo - Create </h1>
+					<form action="datosInsertados.php" method="post">
+					
+					<h3>Ingrese su nombre:</h3>
+					<input type="text" name="txtname">
+					
+					<h3>Ingrese su email:</h3>
+					<input type="text" name="txtemail">
+						
+					<h3>Seleccione su equipo:</h3>
+					<select name="selequipo" >
+						<option value="0"> Seleccione </option>
+						<option value="1"> Jaguares Negros </option>
+						<option value="2"> Borregos ITESM </option>
+						<option value="3"> Linces UVM </option>
+						<option value="4"> Pumas SED </option>
+						<option value="5"> Ocelotes UNACH </option>
+					</select>
+					
+					<h3> Agente libre:</h3>
+					<input type="checkbox">
+					
+					<br><br>
+					<input type="submit" value="Registrar">
+					<br><br>
+					</form>	
+			</div>
+
+
+		</div></center>
+	</body>
+</HTML>
